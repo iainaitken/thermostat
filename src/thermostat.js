@@ -4,7 +4,7 @@ class Thermostat {
     this.powerSave = true;
     this.maxtemp = 25
   }
-  // Think about refactoring to pass a block to the constructor - maxtemp should 
+  // Think about refactoring to pass a block to the constructor - maxtemp should
   // depend on whether powersave is on or off
 
   up() {
@@ -29,4 +29,31 @@ class Thermostat {
     this.powerSave === true ? this.powerSave = false : this.powerSave = true;
     this.powerSave === true ? this.maxtemp = 25 : this.maxtemp = 32;
   }
+
+  reset() {
+    this.temp = 20;
+  }
+
+  usage() {
+    if (this.temp < 18) {
+      return "Low Usage";
+    }
+    else if (this.temp <=25) {
+      return "Medium Usage";
+    }
+    else {
+      return "AMERICA FUCK YEAH";
+    }
+  }
+
+
+
+  // switch (this.temp) {
+  //   case (this.temp < 18):
+  //     return "Low Usage";
+  //   case (this.temp <= 25):
+  //     return "Medium Usage";
+  //   case (this.temp > 25):
+  //     return "AMERICA FUCK YEAH";
+  // };
 }

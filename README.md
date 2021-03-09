@@ -50,29 +50,45 @@ The minimum temperature is 10 degrees
 Power saving mode is on by default but it can also be turned off
 
 > As a User
-> 
+>
 > So I don't use too much energy
-> 
+>
 > Power saving should be on by default
 
 > As a User
-> 
+>
 > So I can annoy Greta Thunberg
-> 
+>
 > I want to be able to turn power saving off
 
 If power saving mode is on, the maximum temperature is 25 degrees
 
 > As a User
-> 
+>
 > So I don't use too much energy
-> 
+>
 > Max temp if Power saving is on should be 25
 
 If power saving mode is off, the maximum temperature is 32 degrees
 
 > As a User
-> 
+>
 > So that my house doesn't melt
-> 
+>
 > Max temp if Power saving is off should be 32
+
+You can reset the temperature to 20 with a reset function
+
+> As a User
+>
+> So I dont have to press a button a million times
+>
+> I can reset the temperature to 20
+
+You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 25 is medium-usage, anything else is high-usage.
+
+> As a User
+>
+> So I can make sure I'm wasting enough energy
+>
+> I want to check my current energy usage

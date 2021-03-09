@@ -43,7 +43,7 @@ describe('Thermostat', function() {
       thermostat.togglePowerSave();
       expect(thermostat.powerSave).toEqual(false);
     });
-    
+
     it('max temp with powersave is 25 degrees', function() {
       for(var i=20; i<25; i+=1) {
         thermostat.up();
@@ -59,4 +59,36 @@ describe('Thermostat', function() {
       expect(function() { thermostat.up() }).toThrow(new Error("This is the maximum temperature"));
     });
   });
+
+  describe('reset', function() {
+
+    it('can reset the temperature to 20', function() {
+      thermostat.up();
+      expect(thermostat.temp).toEqual(21);
+      thermostat.reset();
+      expect(thermostat.temp).toEqual(20);
+    });
+  });
+
+  describe('current energy usage', function() {
+    it('will show me a low usage below 18 degrees', function() {
+      for(var i=20; i>15; i-=1) {
+        thermostat.down();
+      };
+      expect(thermostat.usage()).toEqual("Low Usage");
+    });
+
+    it('will show me a medium usage between 18 & 25 degrees', function() {
+      expect(thermostat.usage()).toEqual("Medium Usage");
+    });
+
+    it('will show me a high usage above 25 degrees', function() {
+      thermostat.togglePowerSave()
+      for(var i=20; i<28; i+=1) {
+        thermostat.up();
+      };
+      expect(thermostat.usage()).toEqual("AMERICA FUCK YEAH");
+    });
+  });
+
 });
