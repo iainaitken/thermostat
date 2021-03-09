@@ -9,21 +9,21 @@ describe('Thermostat', function() {
 
   describe('temp', function() {
     it('has a default temperature of 20 degrees', function() {
-      expect(thermostat.temp).toEqual(20);
+      expect(thermostat.currentTemp()).toEqual(20);
     });
   });
 
   describe('up', function() {
     it('increase the temperature by 1 degrees', function() {
       thermostat.up();
-      expect(thermostat.temp).toEqual(21);
+      expect(thermostat.currentTemp()).toEqual(21);
     });
   });
 
   describe('down', function() {
     it('decreases the temperature by 1 degrees', function() {
       thermostat.down();
-      expect(thermostat.temp).toEqual(19);
+      expect(thermostat.currentTemp()).toEqual(19);
     });
 
     it('cannot go below 10 degrees', function() {
@@ -64,9 +64,9 @@ describe('Thermostat', function() {
 
     it('can reset the temperature to 20', function() {
       thermostat.up();
-      expect(thermostat.temp).toEqual(21);
+      expect(thermostat.currentTemp()).toEqual(21);
       thermostat.reset();
-      expect(thermostat.temp).toEqual(20);
+      expect(thermostat.currentTemp()).toEqual(20);
     });
   });
 
