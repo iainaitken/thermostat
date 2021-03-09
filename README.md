@@ -18,8 +18,31 @@ You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 2
 Thermostat starts at 20 degrees:
 
 > As a user
-> 
+>
 > So that I won't freeze my balls
-> 
+>
 > Thermostat should start out at 20 degrees
 
+You can increase the temperature with an up function
+
+>As a User
+>
+>So that I can get warmer
+>
+>I want to be able to increase the temperature
+
+You can decrease the temperature with a down function
+
+>As a User
+>
+>So that i can cool my balls off
+>
+>I want to be able to decrease the temperature
+
+The minimum temperature is 10 degrees
+
+>As a User
+>
+>So that the house doesn't actually freeze
+>
+>Thermostat cannot go below 10 degrees
