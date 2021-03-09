@@ -87,7 +87,7 @@ describe('Thermostat', function() {
       for(var i=20; i<28; i+=1) {
         thermostat.up();
       };
-      expect(thermostat.usage()).toEqual("AMERICA FUCK YEAH");
+      expect(thermostat.usage()).toEqual("High Usage");
     });
   });
 

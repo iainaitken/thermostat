@@ -35,25 +35,13 @@ class Thermostat {
   }
 
   usage() {
-    if (this.temp < 18) {
-      return "Low Usage";
-    }
-    else if (this.temp <=25) {
-      return "Medium Usage";
-    }
-    else {
-      return "AMERICA FUCK YEAH";
+    switch (true) {
+      case (this.temp < 18):
+        return "Low Usage";
+      case (this.temp <= 25):
+        return "Medium Usage";
+      default:
+        return "High Usage";
     }
   }
-
-
-
-  // switch (this.temp) {
-  //   case (this.temp < 18):
-  //     return "Low Usage";
-  //   case (this.temp <= 25):
-  //     return "Medium Usage";
-  //   case (this.temp > 25):
-  //     return "AMERICA FUCK YEAH";
-  // };
 }
