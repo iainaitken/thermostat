@@ -63,4 +63,16 @@ Power saving mode is on by default but it can also be turned off
 
 If power saving mode is on, the maximum temperature is 25 degrees
 
+> As a User
+> 
+> So I don't use too much energy
+> 
+> Max temp if Power saving is on should be 25
+
 If power saving mode is off, the maximum temperature is 32 degrees
+
+> As a User
+> 
+> So that my house doesn't melt
+> 
+> Max temp if Power saving is off should be 32

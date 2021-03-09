@@ -43,5 +43,20 @@ describe('Thermostat', function() {
       thermostat.togglePowerSave();
       expect(thermostat.powerSave).toEqual(false);
     });
+    
+    it('max temp with powersave is 25 degrees', function() {
+      for(var i=20; i<25; i+=1) {
+        thermostat.up();
+      };
+      expect(function() { thermostat.up() }).toThrow(new Error("This is the maximum temperature"));
+    });
+
+    it('max temp without powersave is 32 degrees', function() {
+      thermostat.togglePowerSave();
+      for(var i=20; i<32; i+=1) {
+        thermostat.up();
+      };
+      expect(function() { thermostat.up() }).toThrow(new Error("This is the maximum temperature"));
+    });
   });
 });
