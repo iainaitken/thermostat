@@ -46,3 +46,21 @@ The minimum temperature is 10 degrees
 >So that the house doesn't actually freeze
 >
 >Thermostat cannot go below 10 degrees
+
+Power saving mode is on by default but it can also be turned off
+
+> As a User
+> 
+> So I don't use too much energy
+> 
+> Power saving should be on by default
+
+> As a User
+> 
+> So I can annoy Greta Thunberg
+> 
+> I want to be able to turn power saving off
+
+If power saving mode is on, the maximum temperature is 25 degrees
+
+If power saving mode is off, the maximum temperature is 32 degrees

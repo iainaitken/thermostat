@@ -1,6 +1,7 @@
 class Thermostat {
   constructor() {
     this.temp = 20;
+    this.powerSave = true;
   }
 
   up() {
@@ -16,4 +17,7 @@ class Thermostat {
     }
   }
 
+  togglePowerSave() {
+    this.powerSave === true ? this.powerSave = false : this.powerSave = true;
+  }
 }
