@@ -10,8 +10,6 @@ class Thermostat {
     this.powerSave = true;
     this.maxtemp = this.MAX_TEMP_POWERSAVE;
   }
-  // Think about refactoring to pass a block to the constructor - maxtemp should
-  // depend on whether powersave is on or off
 
   currentTemp() {
     return this.temp;
@@ -38,6 +36,10 @@ class Thermostat {
   togglePowerSave() {
     this.powerSave === true ? this.powerSave = false : this.powerSave = true;
     this.powerSave === true ? this.maxtemp = this.MAX_TEMP_POWERSAVE : this.maxtemp = this.MAX_TEMP_NO_POWERSAVE;
+    if (this.temp > this.maxtemp) {
+      this.temp = this.maxtemp;
+      // work out how to send a message to jquery to refresh temp display
+    }
   }
 
   reset() {
@@ -47,11 +49,11 @@ class Thermostat {
   usage() {
     switch (true) {
       case (this.temp < this.LOW_ENERGY_USE):
-        return "Low Usage";
+        return "low-usage";
       case (this.temp <= this.MED_ENERGY_USE):
-        return "Medium Usage";
+        return "medium-usage";
       default:
-        return "High Usage";
+        return "high-usage";
     }
   }
 }

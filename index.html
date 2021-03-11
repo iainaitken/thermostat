@@ -1,0 +1,36 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thermostat</title>
+
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery.js"></script>
+    <script>
+ 
+    $( document ).ready(function() {
+      $( "a" ).click(function( event ) {
+          alert( "As you can see, the link no longer took you to jquery.com" );
+          event.preventDefault();
+      });
+    });
+ 
+    </script>
+    <h1 id="temperature">Temperature is [thermostat.currentTemp()]</h1>
+    <p>
+      <button id="temperature-up">+</button>
+      <button id="temperature-down">-</button>
+      <button id="temperature-reset">reset</button>
+      <br>
+      power saving mode is <span id="power-saving-status">on</span>
+      <br>
+      <button id="powersave-mode">PowerSave Mode</button>
+    </p>
+    <script src="src/thermostat.js"></script>
+  </body>
+</html>
